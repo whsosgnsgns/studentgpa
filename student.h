@@ -16,7 +16,6 @@ public:
 	}
 	~Student()
 	{
-		// cout << "Destructor called for " << name << endl;
 	}
 
 	string get_name() { return name; }
