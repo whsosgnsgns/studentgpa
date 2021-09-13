@@ -27,27 +27,26 @@ public:
 	{
 	}
 
-	string get_name() { return name; }
+	std::string get_name() { return name; }
 	int get_age() { return age; }
-	string get_course() { return course; }
+	void get_course();
 	double get_gpa() { return GPA; }
-	void Student_info(); // displays student name and age
-	void Student_gradeinfo(); // displays student name, age and GPA
-	void set_name(string stu_name) { name = stu_name; }
+	void Student_info(); // displays student name, age, and GPA
+	void set_name(std::string stu_name) { name = stu_name; }
 	void set_age(int stu_age) { age = stu_age; }
-	char get_classgrade(string course);
-	void add_course_grade(string classname, char stu_grade)
+	void get_classgrade(std::string course);
+	void add_course_grade(std::string classname, char stu_grade)
 	{
 		course_list.push_back(classname);
 		grade_list.push_back(stu_grade);
 	}
-	vector <string> course_list; // list of course;
-	vector <char> grade_list; // list of grade for each course
+	std::vector <std::string> course_list; // list of course;
+	std::vector <char> grade_list; // list of grade for each course
 	double compute_gpa();
 
 
 private:
-	string name; // name of student
+	std::string name; // name of student
 	int age; // age of student
 	char grade; // grade student made (A~F)
 	string course; // name of course taken
@@ -55,9 +54,6 @@ private:
 	// vector <string> course_list; // list of course;
 	// vector <char> grade_list; // list of grade for each course
 };
-
-
-
 
 
 #endif
