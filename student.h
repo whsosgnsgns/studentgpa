@@ -13,9 +13,16 @@ public:
 	{
 		name = stu_name;
 		age = stu_age;
-		course = "";
-		grade = 'F';
+		gpa = 0.0;
 	}
+	
+	Student(std::string stu_name)
+	{
+		name = stu_name;
+		age = 18;
+		GPA = 0.0;
+	}
+	
 	~Student()
 	{
 	}
