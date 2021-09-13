@@ -1,7 +1,9 @@
 #ifndef STUDENT_H_
 #define STUDENT_H_
 
-
+#include <iostream>
+#include <string>
+#include <vector>
 
 
 class Student
