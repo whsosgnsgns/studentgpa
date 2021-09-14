@@ -50,7 +50,7 @@ void Student::get_course()
 	}
 }
 
-double Student::compute_gpa()
+void Student::compute_gpa()
 {
 	int total = 0;
 	for (unsigned int i = 0; i < grade_list.size(); i++)
@@ -66,7 +66,5 @@ double Student::compute_gpa()
 		else
 			total += 0;
 	}
-	double GPA = total / grade_list.size();
-
-	return GPA;
+	GPA = total / grade_list.size();
 }
