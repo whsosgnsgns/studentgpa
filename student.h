@@ -37,9 +37,15 @@ public:
 	void get_classgrade(std::string course);
 	void add_course_grade(std::string classname, char stu_grade)
 	{
-		course_list.push_back(classname);
-		grade_list.push_back(stu_grade);
+		int check = 0;
+		check = get_check();
+		if (check == 0)
+		{
+			course_list.push_back(classname);
+			grade_list.push_back(stu_grade);
+		}
 	}
+	int get_check(std::string classname);
 	std::vector <std::string> course_list; // list of course;
 	std::vector <char> grade_list; // list of grade for each course
 	void compute_gpa();
