@@ -42,7 +42,7 @@ public:
 	}
 	std::vector <std::string> course_list; // list of course;
 	std::vector <char> grade_list; // list of grade for each course
-	double compute_gpa();
+	void compute_gpa();
 
 
 private:
