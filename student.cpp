@@ -50,6 +50,23 @@ void Student::get_course()
 	}
 }
 
+int Student::get_check(string classname)
+{
+	int check = 0;
+	if (course_list.size() != 0)
+	{
+		for (unsigned int i = 0; i < course_list.size(); i++)
+		{
+			if (classname == course_list[i])
+			{
+				check = 1;
+				return check;
+			}
+		}
+	}
+	return check;
+}
+
 void Student::compute_gpa()
 {
 	int total = 0;
